@@ -7,4 +7,5 @@ gs -sOutputFile="$file_out" -sDEVICE=pdfwrite -sColorConversionStrategy=Gray -dP
 dir_structure=$(dirname "$file")
 newdir="$base_out"/"$dir_structure"
 mkdir -p "$newdir"
-mv "$file_out" ./pdfgris/"$file"
+mv "$file_out" ./"$base_out"/"$file"
+echo "Converted $file"
